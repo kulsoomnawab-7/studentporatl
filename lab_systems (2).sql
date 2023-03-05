@@ -1,0 +1,232 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1:3306
+-- Generation Time: Feb 23, 2023 at 05:46 AM
+-- Server version: 5.7.36
+-- PHP Version: 7.4.26
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `anusdb_2`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `lab_systems`
+--
+
+DROP TABLE IF EXISTS `lab_systems`;
+CREATE TABLE IF NOT EXISTS `lab_systems` (
+  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `Host_Name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Status` int(11) NOT NULL DEFAULT '0',
+  `Lab_id` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `lab_systems_lab_id_foreign` (`Lab_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=652 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `lab_systems`
+--
+
+INSERT INTO `lab_systems` (`id`, `Host_Name`, `Status`, `Lab_id`, `created_at`, `updated_at`) VALUES
+(326, 'pc1', 1, 1, NULL, '2023-02-23 00:44:02'),
+(327, 'pc2', 1, 1, NULL, '2023-02-20 00:06:34'),
+(328, 'pc3', 1, 1, NULL, NULL),
+(329, 'pc4', 1, 1, NULL, NULL),
+(330, 'pc5', 1, 1, NULL, NULL),
+(331, 'pc6', 1, 1, NULL, NULL),
+(332, 'pc7', 1, 1, NULL, NULL),
+(333, 'pc8', 1, 1, NULL, NULL),
+(334, 'pc9', 1, 1, NULL, NULL),
+(335, 'pc10', 1, 1, NULL, NULL),
+(336, 'pc11', 1, 1, NULL, NULL),
+(337, 'pc12', 1, 1, NULL, NULL),
+(338, 'pc13', 1, 1, NULL, NULL),
+(339, 'pc14', 1, 1, NULL, NULL),
+(340, 'pc15', 1, 1, NULL, NULL),
+(341, 'pc16', 1, 1, NULL, NULL),
+(342, 'pc17', 1, 1, NULL, NULL),
+(343, 'pc18', 1, 1, NULL, NULL),
+(344, 'pc1', 1, 2, NULL, NULL),
+(345, 'pc2', 1, 2, NULL, NULL),
+(346, 'pc3', 1, 2, NULL, NULL),
+(347, 'pc4', 1, 2, NULL, NULL),
+(348, 'pc5', 1, 2, NULL, NULL),
+(349, 'pc6', 1, 2, NULL, NULL),
+(350, 'pc7', 1, 2, NULL, NULL),
+(351, 'pc8', 1, 2, NULL, NULL),
+(352, 'pc9', 1, 2, NULL, NULL),
+(353, 'pc10', 1, 2, NULL, NULL),
+(354, 'pc11', 1, 2, NULL, NULL),
+(355, 'pc12', 1, 2, NULL, NULL),
+(356, 'pc13', 1, 2, NULL, NULL),
+(357, 'pc14', 1, 2, NULL, NULL),
+(358, 'pc15', 1, 2, NULL, NULL),
+(359, 'pc16', 1, 2, NULL, NULL),
+(360, 'pc17', 1, 2, NULL, NULL),
+(361, 'pc18', 1, 2, NULL, NULL),
+(362, 'pc1', 1, 3, NULL, NULL),
+(363, 'pc2', 1, 3, NULL, NULL),
+(364, 'pc3', 1, 3, NULL, NULL),
+(365, 'pc4', 1, 3, NULL, NULL),
+(366, 'pc5', 1, 3, NULL, NULL),
+(367, 'pc6', 1, 3, NULL, NULL),
+(368, 'pc7', 1, 3, NULL, NULL),
+(369, 'pc8', 1, 3, NULL, NULL),
+(370, 'pc9', 1, 3, NULL, NULL),
+(371, 'pc10', 1, 3, NULL, NULL),
+(372, 'pc11', 1, 3, NULL, NULL),
+(373, 'pc12', 1, 3, NULL, NULL),
+(374, 'pc13', 1, 3, NULL, NULL),
+(375, 'pc14', 1, 3, NULL, NULL),
+(376, 'pc15', 1, 3, NULL, NULL),
+(377, 'pc16', 1, 3, NULL, NULL),
+(378, 'pc17', 1, 3, NULL, NULL),
+(379, 'pc18', 1, 3, NULL, NULL),
+(380, 'pc1', 1, 4, NULL, NULL),
+(381, 'pc2', 1, 4, NULL, NULL),
+(382, 'pc3', 1, 4, NULL, NULL),
+(383, 'pc4', 1, 4, NULL, NULL),
+(384, 'pc5', 1, 4, NULL, NULL),
+(385, 'pc6', 1, 4, NULL, NULL),
+(386, 'pc7', 1, 4, NULL, NULL),
+(387, 'pc8', 1, 4, NULL, NULL),
+(388, 'pc9', 1, 4, NULL, NULL),
+(389, 'pc10', 1, 4, NULL, NULL),
+(390, 'pc11', 1, 4, NULL, NULL),
+(391, 'pc12', 1, 4, NULL, NULL),
+(392, 'pc13', 1, 4, NULL, NULL),
+(393, 'pc14', 1, 4, NULL, NULL),
+(394, 'pc15', 1, 4, NULL, NULL),
+(395, 'pc16', 1, 4, NULL, NULL),
+(396, 'pc17', 1, 4, NULL, NULL),
+(397, 'pc18', 1, 4, NULL, NULL),
+(416, 'pc1', 1, 6, NULL, NULL),
+(417, 'pc2', 1, 6, NULL, NULL),
+(418, 'pc3', 1, 6, NULL, NULL),
+(419, 'pc4', 1, 6, NULL, NULL),
+(420, 'pc5', 1, 6, NULL, NULL),
+(421, 'pc6', 1, 6, NULL, NULL),
+(422, 'pc7', 1, 6, NULL, NULL),
+(423, 'pc8', 1, 6, NULL, NULL),
+(424, 'pc9', 1, 6, NULL, NULL),
+(425, 'pc10', 1, 6, NULL, NULL),
+(426, 'pc11', 1, 6, NULL, NULL),
+(427, 'pc12', 1, 6, NULL, NULL),
+(428, 'pc13', 1, 6, NULL, NULL),
+(429, 'pc14', 1, 6, NULL, NULL),
+(430, 'pc15', 1, 6, NULL, NULL),
+(431, 'pc16', 1, 6, NULL, NULL),
+(432, 'pc17', 1, 6, NULL, NULL),
+(433, 'pc18', 1, 6, NULL, NULL),
+(470, 'pc1', 1, 9, NULL, NULL),
+(471, 'pc2', 1, 9, NULL, NULL),
+(472, 'pc3', 1, 9, NULL, NULL),
+(473, 'pc4', 1, 9, NULL, NULL),
+(474, 'pc5', 1, 9, NULL, NULL),
+(475, 'pc6', 1, 9, NULL, NULL),
+(476, 'pc7', 1, 9, NULL, NULL),
+(477, 'pc8', 1, 9, NULL, NULL),
+(478, 'pc9', 1, 9, NULL, NULL),
+(479, 'pc10', 1, 9, NULL, NULL),
+(480, 'pc11', 1, 9, NULL, NULL),
+(481, 'pc12', 1, 9, NULL, NULL),
+(482, 'pc13', 1, 9, NULL, NULL),
+(483, 'pc14', 1, 9, NULL, NULL),
+(484, 'pc15', 1, 9, NULL, NULL),
+(485, 'pc16', 1, 9, NULL, NULL),
+(486, 'pc17', 1, 9, NULL, NULL),
+(487, 'pc18', 1, 9, NULL, NULL),
+(488, 'pc1', 1, 10, NULL, NULL),
+(489, 'pc2', 1, 10, NULL, NULL),
+(490, 'pc3', 1, 10, NULL, NULL),
+(491, 'pc4', 1, 10, NULL, NULL),
+(492, 'pc5', 1, 10, NULL, NULL),
+(493, 'pc6', 1, 10, NULL, NULL),
+(494, 'pc7', 1, 10, NULL, NULL),
+(495, 'pc8', 1, 10, NULL, NULL),
+(496, 'pc9', 1, 10, NULL, NULL),
+(497, 'pc10', 1, 10, NULL, NULL),
+(498, 'pc11', 1, 10, NULL, NULL),
+(499, 'pc12', 1, 10, NULL, NULL),
+(500, 'pc13', 1, 10, NULL, NULL),
+(501, 'pc14', 1, 10, NULL, NULL),
+(502, 'pc15', 1, 10, NULL, NULL),
+(503, 'pc16', 1, 10, NULL, NULL),
+(504, 'pc17', 1, 10, NULL, NULL),
+(505, 'pc18', 1, 10, NULL, NULL),
+(506, 'pc1', 1, 11, NULL, NULL),
+(507, 'pc2', 1, 11, NULL, NULL),
+(508, 'pc3', 1, 11, NULL, NULL),
+(509, 'pc4', 1, 11, NULL, NULL),
+(510, 'pc5', 1, 11, NULL, NULL),
+(511, 'pc6', 1, 11, NULL, NULL),
+(512, 'pc7', 1, 11, NULL, NULL),
+(513, 'pc8', 1, 11, NULL, NULL),
+(514, 'pc9', 1, 11, NULL, NULL),
+(515, 'pc10', 1, 11, NULL, NULL),
+(516, 'pc11', 1, 11, NULL, NULL),
+(517, 'pc12', 1, 11, NULL, NULL),
+(518, 'pc13', 1, 11, NULL, NULL),
+(519, 'pc14', 1, 11, NULL, NULL),
+(520, 'pc15', 1, 11, NULL, NULL),
+(521, 'pc16', 1, 11, NULL, NULL),
+(522, 'pc17', 1, 11, NULL, NULL),
+(523, 'pc18', 1, 11, NULL, NULL),
+(524, 'pc1', 1, 12, NULL, NULL),
+(525, 'pc2', 1, 12, NULL, NULL),
+(526, 'pc3', 1, 12, NULL, NULL),
+(527, 'pc4', 1, 12, NULL, NULL),
+(528, 'pc5', 1, 12, NULL, NULL),
+(529, 'pc6', 1, 12, NULL, NULL),
+(530, 'pc7', 1, 12, NULL, NULL),
+(531, 'pc8', 1, 12, NULL, NULL),
+(532, 'pc9', 1, 12, NULL, NULL),
+(533, 'pc10', 1, 12, NULL, NULL),
+(534, 'pc11', 1, 12, NULL, NULL),
+(535, 'pc12', 1, 12, NULL, NULL),
+(536, 'pc13', 1, 12, NULL, NULL),
+(537, 'pc14', 1, 12, NULL, NULL),
+(538, 'pc15', 1, 12, NULL, NULL),
+(539, 'pc16', 1, 12, NULL, NULL),
+(540, 'pc17', 1, 12, NULL, NULL),
+(541, 'pc18', 1, 12, NULL, NULL),
+(542, 'pc1', 1, 13, NULL, NULL),
+(543, 'pc2', 1, 13, NULL, NULL),
+(544, 'pc3', 1, 13, NULL, NULL),
+(545, 'pc4', 1, 13, NULL, NULL),
+(546, 'pc5', 1, 13, NULL, NULL),
+(547, 'pc6', 1, 13, NULL, NULL),
+(548, 'pc7', 1, 13, NULL, NULL),
+(549, 'pc8', 1, 13, NULL, NULL),
+(550, 'pc9', 1, 13, NULL, NULL),
+(551, 'pc10', 1, 13, NULL, NULL),
+(552, 'pc11', 1, 13, NULL, NULL),
+(553, 'pc12', 1, 13, NULL, NULL),
+(554, 'pc13', 1, 13, NULL, NULL),
+(555, 'pc14', 1, 13, NULL, NULL),
+(556, 'pc15', 1, 13, NULL, NULL),
+(557, 'pc16', 1, 13, NULL, NULL),
+(558, 'pc17', 1, 13, NULL, NULL),
+(559, 'pc18', 1, 13, NULL, NULL),
+(560, 'spc1', 1, 14, NULL, '2023-02-19 03:42:49');
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
